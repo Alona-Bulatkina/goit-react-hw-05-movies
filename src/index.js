@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { Layout} from './components/Layout/Layout';
+import { Layout} from './components/Layout';
 
 const theme = {};
 
@@ -10,8 +10,9 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <Routes>...</Routes>
-        <Layout>...</Layout>
+        <Routes>
+          <Route path="/" element={<Layout />} />
+        </Routes>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,

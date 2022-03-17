@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from "react-router-dom";
-import { GlobalStyle } from '../GlobalStyle';
+import { GlobalStyle } from './GlobalStyle';
 
 const Nav = styled.nav`
     display: flex;
