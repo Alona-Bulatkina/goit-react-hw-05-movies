@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter, Routes } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { Layout} from './components/Layout/Layout';
+
+const theme = {};
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ThemeProvider theme={theme}>
+        <Routes>...</Routes>
+        <Layout>...</Layout>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
